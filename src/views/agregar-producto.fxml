@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apAgregarProductos" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #c6c6c6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.agregarProductoController">
+   <children>
+      <Label layoutX="283.0" layoutY="25.0" style="-fx-font-size: 40; -fx-font-weight: bold; -fx-text-fill: #004aad;" text="Agregar productos" textFill="#004aad" underline="true" />
+      <TableView fx:id="tablaProductos" layoutX="53.0" layoutY="217.0" prefHeight="300.0" prefWidth="900.0" style="-fx-border-color: #004aad;">
+         <columns>
+            <TableColumn fx:id="colId" style="-fx-border-color: #004aad; -fx-font-size: 20;" text="Id" />
+            <TableColumn fx:id="colNombre" prefWidth="170.0" style="-fx-border-color: #004aad; -fx-font-size: 20;" text="Nombre" />
+            <TableColumn fx:id="colDescripcion" prefWidth="300.0" style="-fx-border-color: #004aad; -fx-font-size: 20;" text="Descripcion" />
+            <TableColumn fx:id="colPrecio" prefWidth="145.0" style="-fx-border-color: #004aad ; -fx-font-size: 20;" text="Precio" />
+            <TableColumn fx:id="colStock" prefWidth="100.0" style="-fx-border-color: #004aad; -fx-font-size: 20;" text="Stock" />
+            <TableColumn fx:id="colCantidad" prefWidth="100.0" style="-fx-border-color: #004aad; -fx-font-size: 20;" text="Cantidad" />
+         </columns>
+      </TableView>
+      <Spinner fx:id="spCantidad" editable="true" layoutX="493.0" layoutY="157.0" prefHeight="27.0" prefWidth="161.0" style="-fx-border-color: #004aad;" />
+      <Label layoutX="375.0" layoutY="156.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #004aad;" text="Cantidad" textFill="#004aad" />
+      <Label layoutX="53.0" layoutY="155.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #004aad;" text="Producto" textFill="#004aad" />
+      <ComboBox fx:id="cbProductos" layoutX="172.0" layoutY="157.0" prefHeight="27.0" prefWidth="181.0" promptText="Selecione un producto..." style="-fx-border-color: #004aad;" />
+      <Button fx:id="btnAgregarProducto" layoutX="683.0" layoutY="154.0" mnemonicParsing="false" onAction="#onClickAgregarProducto" onMouseEntered="#mouseAgregarProducto" onMouseExited="#mouseExitAgregrarProducto" style="-fx-background-color: #004aad; -fx-border-color: black;" text="Agregar producto" textFill="WHITE">
+         <font>
+            <Font name="SimSun" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="556.0" layoutY="546.0" mnemonicParsing="false" onAction="#onClickCancelar" onMouseEntered="#mouseCancelar" onMouseExited="#mouseExitCancelar" style="-fx-background-color: #004aad; -fx-border-color: black;" text="cancelar" textFill="WHITE">
+         <font>
+            <Font name="SimSun" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAgregarVenta" layoutX="169.0" layoutY="546.0" mnemonicParsing="false" onAction="#onClickAgregarVenta" onMouseEntered="#mouseAgregarVenta" onMouseExited="#mouseExitAgregarVenta" style="-fx-background-color: #004aad; -fx-border-color: black;" text="Agregar a la venta" textFill="WHITE">
+         <font>
+            <Font name="SimSun" size="18.0" />
+         </font>
+      </Button>
+      <Separator layoutX="53.0" layoutY="196.0" prefHeight="12.0" prefWidth="900.0" style="-fx-background-color: #004aad;" />
+   </children>
+</AnchorPane>

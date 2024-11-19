@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="820.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductosController">
+    <children>
+        <Label layoutX="297.0" layoutY="14.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: black;" text="Gestión de Productos" />
+
+
+        <TextField fx:id="filterField" layoutX="20.0" layoutY="60.0" promptText="Filtrar" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+
+
+        <Button fx:id="botonActualizarProducto" layoutX="216.0" layoutY="430.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Actualizar Producto" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="15.0" />
+            </font>
+        </Button>
+
+
+        <Button fx:id="botonVerDetallesProducto" layoutX="607.0" layoutY="430.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Ver Detalles" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="15.0" />
+            </font>
+        </Button>
+
+
+        <TextField fx:id="textNombreProducto" layoutX="20.0" layoutY="140.0" promptText="Nombre del Producto" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+        <TextField fx:id="textPrecio" layoutX="200.0" layoutY="140.0" promptText="Precio" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+        <TextField fx:id="textStock" layoutX="400.0" layoutY="140.0" promptText="Stock" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+
+
+        <TableView fx:id="tablaProductos" layoutX="20.0" layoutY="196.0" prefHeight="205.0" prefWidth="800.0" style="-fx-background-color: white;">
+            <columns>
+                <TableColumn fx:id="colNombreProducto" prefWidth="248.0" text="Nombre del Producto" />
+                <TableColumn fx:id="colPrecio" prefWidth="211.0" text="Precio" />
+                <TableColumn fx:id="colStock" prefWidth="171.0" text="Stock" />
+                <TableColumn fx:id="colAcciones" prefWidth="169.0" text="Acciones" />
+            </columns>
+        </TableView>
+
+
+        <Separator layoutX="20.0" layoutY="170.0" prefHeight="3.0" prefWidth="800.0" />
+
+
+        <Button fx:id="botonBuscarProducto" layoutX="178.0" layoutY="60.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Buscar" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="botonCrearProducto" layoutX="53.0" layoutY="430.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Crear Producto" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="botonEliminarProducto" layoutX="418.0" layoutY="430.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Eliminar Producto" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="15.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

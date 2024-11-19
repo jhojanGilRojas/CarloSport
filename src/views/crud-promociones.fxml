@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="820.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PromocionesController">
+    <children>
+        <Label layoutX="297.0" layoutY="14.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: black;" text="Gestión de Promociones" />
+
+
+        <TextField fx:id="filterField" layoutX="20.0" layoutY="60.0" promptText="Filtrar" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+
+
+        <Button fx:id="botonCrear" layoutX="96.0" layoutY="418.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Crear" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="15.0" />
+            </font>
+        </Button>
+
+
+        <Button fx:id="botonEditar" layoutX="378.0" layoutY="418.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Editar" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="15.0" />
+            </font>
+        </Button>
+
+
+        <Button fx:id="botonEliminar" layoutX="640.0" layoutY="418.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Eliminar" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="15.0" />
+            </font>
+        </Button>
+
+
+        <TextField fx:id="textNombre" layoutX="20.0" layoutY="140.0" promptText="Nombre" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+        <TextField fx:id="textDescripcion" layoutX="211.0" layoutY="140.0" promptText="Descripción" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+
+
+        <DatePicker fx:id="dpFechaInicio" layoutX="395.0" layoutY="140.0" promptText="Fecha Inicio" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+        <DatePicker fx:id="dpFechaFin" layoutX="611.0" layoutY="140.0" promptText="Fecha Fin" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+
+
+        <TextField fx:id="textDescuento" layoutX="21.0" layoutY="198.0" promptText="Descuento (%)" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+
+
+        <TableView fx:id="tablaPromociones" layoutX="20.0" layoutY="260.0" prefHeight="150.0" prefWidth="780.0" style="-fx-background-color: white;">
+            <columns>
+                <TableColumn fx:id="colNombre" prefWidth="101.0" text="Nombre" />
+                <TableColumn fx:id="colDescripcion" prefWidth="239.0" text="Descripción" />
+                <TableColumn fx:id="colFechaInicio" prefWidth="144.0" text="Fecha Inicio" />
+                <TableColumn fx:id="colFechaFin" minWidth="0.0" prefWidth="174.0" text="Fecha Fin" />
+                <TableColumn fx:id="colDescuento" prefWidth="120.0" text="Descuento (%)" />
+            </columns>
+        </TableView>
+
+
+        <Separator layoutX="20.0" layoutY="170.0" prefHeight="3.0" prefWidth="780.0" style="-fx-background-color: black;" />
+
+
+        <Button fx:id="botonBuscar" layoutX="178.0" layoutY="60.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Buscar" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="15.0" />
+            </font>
+        </Button>
+        <Separator layoutX="20.0" layoutY="238.0" prefHeight="3.0" prefWidth="780.0" style="-fx-background-color: black;" />
+    </children>
+</AnchorPane>

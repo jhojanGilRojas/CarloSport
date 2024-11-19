@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1200.0" style="-fx-background-color: #c6c6c6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VentasController">
+    <children>
+        <Label layoutX="469.0" layoutY="14.0" style="-fx-font-size: 40; -fx-font-weight: bold; -fx-text-fill: #004aad;" text="Gestión de ventas" textFill="#004aad" underline="true" />
+
+
+        <TextField fx:id="filterField" layoutX="20.0" layoutY="60.0" promptText="Filtrar" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+
+
+        <Button fx:id="btnRegistrarVenta" layoutX="98.0" layoutY="557.0" mnemonicParsing="false" onAction="#onClickRegistrarVenta" onMouseEntered="#mouseRegistrar" onMouseExited="#mouseExitRegistrar" style="-fx-background-color: #004aad; -fx-border-color: black;" text="Registrar Venta" textFill="WHITE">
+            <font>
+                <Font name="SimSun" size="18.0" />
+            </font>
+        </Button>
+
+
+        <Button fx:id="btnDetalleVenta" layoutX="949.0" layoutY="557.0" mnemonicParsing="false" onAction="#onClickDetalle" onMouseEntered="#mouseDetalle" onMouseExited="#mouseExitDetalle" style="-fx-background-color: #004aad; -fx-border-color: black;" text="Detalle Venta" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="18.0" />
+            </font>
+        </Button>
+        
+        <TableView fx:id="tablaVentas" layoutX="20.0" layoutY="196.0" prefHeight="338.0" prefWidth="1150.0" style="-fx-border-color: #004aad;">
+            <columns>
+                <TableColumn fx:id="colIdVenta" prefWidth="200.0" style="-fx-border-color: #004aad; -fx-font-size: 20;" text="Id Venta"/>
+                <TableColumn fx:id="colMontoTotal" prefWidth="200.0" style="-fx-border-color: #004aad; -fx-font-size: 20;" text="Monto Total" />
+                <TableColumn fx:id="colFechaVenta" prefWidth="200.0" style="-fx-border-color: #004aad ; -fx-font-size: 20;" text="Fecha de Venta" />
+                <TableColumn fx:id="colEstado" prefWidth="200.0" style="-fx-border-color: #004aad; -fx-font-size: 20;" text="Estado" />
+                <TableColumn fx:id="colProductos" prefWidth="345.0" style="-fx-border-color: #004aad; -fx-font-size: 20;" text="Productos" />
+            </columns>
+        </TableView>
+
+
+        <Separator layoutX="20.0" layoutY="179.0" prefHeight="12.0" prefWidth="1150.0" style="-fx-background-color: #004aad;" />
+
+
+        <Button fx:id="botonBuscarVenta" layoutX="275.0" layoutY="60.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="80.0" style="-fx-background-color: #004aad; -fx-border-color: black;" text="Buscar" textFill="#f5efef">
+            <font>
+                <Font name="SimSun" size="18.0" />
+            </font>
+        </Button>
+        <DatePicker fx:id="dpFechaDeVenta" layoutX="20.0" layoutY="130.0" prefHeight="41.0" prefWidth="226.0" promptText="Fecha de Venta" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" />
+      <Button fx:id="btnProducto" layoutX="295.0" layoutY="130.0" mnemonicParsing="false" onAction="#onClickAgregarProductos" onMouseEntered="#mouseProductos" onMouseExited="#mouseExitProductos" prefHeight="41.0" prefWidth="226.0" style="-fx-background-color: white; -fx-border-color: black; -fx-text-fill: #c3c3c3;" text="Agregrar Productos">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditarVenta" layoutX="387.0" layoutY="557.0" mnemonicParsing="false" onAction="#onclickEditarVenta" onMouseEntered="#mouseEditar" onMouseExited="#mouseExitEditar" style="-fx-background-color: #004aad; -fx-border-color: black;" text="Editar Venta" textFill="WHITE">
+         <font>
+            <Font name="SimSun" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelarVenta" layoutX="664.0" layoutY="557.0" mnemonicParsing="false" onAction="#onClickCancelarVenta" onMouseEntered="#mouseCancelar" onMouseExited="#mouseExitCancelar" style="-fx-background-color: #004aad; -fx-border-color: black;" text="Cancelar Venta" textFill="WHITE">
+         <font>
+            <Font name="SimSun" size="18.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
